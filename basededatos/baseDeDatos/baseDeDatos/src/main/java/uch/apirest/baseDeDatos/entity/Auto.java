@@ -1,9 +1,6 @@
 package uch.apirest.baseDeDatos.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 @Entity
 public class Auto {
@@ -16,12 +13,16 @@ public class Auto {
     private String modelo;
     private int año;
 
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "propietario_id")
+    private Propietario2 propietario2;
     public Auto() {}
 
-    public Auto(String marca, String modelo, int año) {
+    public Auto(String marca, String modelo, int año, Propietario2 propietario2) {
         this.marca = marca;
         this.modelo = modelo;
         this.año = año;
+        this.propietario2 = propietario2;
     }
 
     public Long getId() {
@@ -54,5 +55,13 @@ public class Auto {
 
     public void setAño(int año) {
         this.año = año;
+    }
+
+    public Propietario2 getPropietario2() {
+        return propietario2;
+    }
+
+    public void setPropietario2(Propietario2 propietario2) {
+        this.propietario2 = propietario2;
     }
 }

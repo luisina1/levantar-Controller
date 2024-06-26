@@ -1,0 +1,4 @@
+2024-06-25 22:34:01.930356-03:00 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Tabla "PROPIETARIO2" no encontrada
+Table "PROPIETARIO2" not found; SQL statement:
+SELECT * FROM PROPIETARIO2 [42102-224]

@@ -1,6 +1,10 @@
+uch\apirest\baseDeDatos\repository\PropietarioRepository2.class
 uch\apirest\baseDeDatos\service\AutoService.class
 uch\apirest\baseDeDatos\BaseDeDatosApplication.class
 uch\apirest\baseDeDatos\repository\AutoRepository.class
+uch\apirest\baseDeDatos\service\PropietarioService.class
 uch\apirest\baseDeDatos\ServletInitializer.class
+uch\apirest\baseDeDatos\controller\PropietarioController.class
+uch\apirest\baseDeDatos\entity\Propietario2.class
 uch\apirest\baseDeDatos\controller\AutoController.class
 uch\apirest\baseDeDatos\entity\Auto.class
