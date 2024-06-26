@@ -1,0 +1,6 @@
+uch\apirest\baseDeDatos\service\AutoService.class
+uch\apirest\baseDeDatos\BaseDeDatosApplication.class
+uch\apirest\baseDeDatos\repository\AutoRepository.class
+uch\apirest\baseDeDatos\ServletInitializer.class
+uch\apirest\baseDeDatos\controller\AutoController.class
+uch\apirest\baseDeDatos\entity\Auto.class
