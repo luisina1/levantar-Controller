@@ -2,6 +2,7 @@ package uch.apirest.baseDeDatos.entity;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -13,7 +14,7 @@ public class Propietario2 {
     private String nombre;
 
     @OneToMany(mappedBy = "propietario2", cascade = CascadeType.ALL)
-    private List<Auto> autos;
+    private List<Auto> autos = new ArrayList<>();
 
     public Propietario2() {}
 
@@ -35,5 +36,13 @@ public class Propietario2 {
 
     public void setNombre(String nombre) {
         this.nombre = nombre;
+    }
+
+    public List<Auto> getAutos() {
+        return autos;
+    }
+
+    public void setAutos(List<Auto> autos) {
+        this.autos = autos;
     }
 }

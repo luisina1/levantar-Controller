@@ -13,9 +13,12 @@ public class Auto {
     private String modelo;
     private int año;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "propietario_id")
     private Propietario2 propietario2;
+
+    @OneToOne(mappedBy = "auto", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Patente patente;
     public Auto() {}
 
     public Auto(String marca, String modelo, int año, Propietario2 propietario2) {
@@ -23,6 +26,12 @@ public class Auto {
         this.modelo = modelo;
         this.año = año;
         this.propietario2 = propietario2;
+    }
+
+    public Auto(String marca, String modelo, int año) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.año = año;
     }
 
     public Long getId() {
@@ -63,5 +72,16 @@ public class Auto {
 
     public void setPropietario2(Propietario2 propietario2) {
         this.propietario2 = propietario2;
+    }
+
+    public Patente getPatente() {
+        return patente;
+    }
+
+    public void setPatente(Patente patente) {
+        this.patente = patente;
+        if (patente != null) {
+            patente.setAuto(this);
+        }
     }
 }
